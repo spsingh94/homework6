@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>WEATHER DASHBOARD</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" style="background-color: lightgrey;" id="citySelect">
+                <ul class="list-group">
+                    <p style="margin-bottom: 0px;" style="margin-top: 0px">Search for a City:</p>
+                    <input type="text" class="form-control" placeholder="Search City" aria-label="city Search"
+                        aria-describedby="addon-wrapping" id="searchBar" style="margin-bottom: 15px;">
+                    <li class="list-group-item" id="nyc">NEW YORK</li>
+                    <li class="list-group-item" id="lax">LOS ANGELES</li>
+                    <li class="list-group-item" id="chi">CHICAGO</li>
+                    <li class="list-group-item" id="sin">LAS VEGAS</li>
+                    <li class="list-group-item" id="was">SEATTLE</li>
+                    <li class="list-group-item" id="tex">AUSTIN</li>
+                    <li class="list-group-item" id="atl">ATLANTA</li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="row" id="weatherDisplay">
+                    <ul>
+                        <h2 id="chosenCity"></h2>
+                        <ol></ol>
+                        <ol></ol>
+                        <ol></ol>
+                        <ol></ol>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row" id="dailyForecast">
+                    <h3 id="chosenCity">5-DAY FORECAST:</h3>
+                    <br>
+                    <br>
+                    <!-- forecast table -->
+                    <table class="table table-borderless">
+                        <!-- day 1 -->
+                        <th scope="col">
+                            <div class="forecast">
+                                hello
+                            </div>
+                        </th>
+                        <!-- day 2 -->
+                        <th scope="col">
+                            <div class="forecast">
+                                hello
+                            </div>
+                        </th>
+                        <!-- day 3 -->
+                        <th scope="col">
+                            <div class="forecast">
+                                hello
+                            </div>
+                        </th>
+                        <!-- day 4 -->
+                        <th scope="col">
+                            <div class="forecast">
+                                hello
+                            </div>
+                        </th>
+                        <!-- day 5 -->
+                        <th scope="col">
+                            <div class="forecast">
+                                hello
+                            </div>
+                        </th>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- link jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- beginning of javascript/call to weather api -->
+    <script>
+        var apiKey = "bf7d4ae013d0bfbbd881ad4e4fc83e39";
+        var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=bf7d4ae013d0bfbbd881ad4e4fc83e39";
+
+        var linkApi = $.ajax({
+            url: apiUrl,
+            type: "GET"
+        }).then(function (response) {
+
+            var nycWeather = response.list;
+
+            var nycBtnClick = $("#nyc").click(function (response) {
+                console.log(response);
+                $("#weatherDisplay").append(nycWeather);
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

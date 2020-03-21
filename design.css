@@ -1,0 +1,53 @@
+h1 {
+    text-align: center;
+    background-color: #004d99;
+    color: white;
+    padding: 20px 20px;
+}
+
+#citySelect {
+padding: 0px 20px 15px 20px;
+align-content: center;
+}
+
+.list-group-item:hover {
+background-color: #66b3ff;
+}
+
+.list-group-item {
+    text-align: center;
+}
+
+#weatherResults {
+border-style: solid 200px red;
+}
+
+ol {
+text-align: left;
+}
+
+h2 {
+    padding-top: 30px;
+}
+
+#weatherDisplay {
+    border-style: solid;
+    border-color: lightslategrey;
+    border-width: thin;
+    margin: 10px 0px 0px 0px;
+}
+
+#dailyForecast {
+    border-style: solid;
+    border-color: lightslategrey;
+    border-width: thin;
+    padding-right: 100px;
+    width: 100%;
+    
+}
+
+.forecast {
+    background-color: red;
+padding: 50px;
+margin: 0px;
+}
