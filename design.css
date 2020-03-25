@@ -14,7 +14,7 @@ align-content: center;
 background-color: #66b3ff;
 }
 
-.list-group-item {
+li {
     text-align: center;
 }
 
@@ -37,17 +37,15 @@ h2 {
     margin: 10px 0px 0px 0px;
 }
 
-#dailyForecast {
-    border-style: solid;
+#chosenCity {
     border-color: lightslategrey;
     border-width: thin;
     padding-right: 100px;
     width: 100%;
-    
 }
 
 .forecast {
-    background-color: red;
+    background-color: dodgerblue;
 padding: 50px;
-margin: 0px;
+margin: -10px;
 }
